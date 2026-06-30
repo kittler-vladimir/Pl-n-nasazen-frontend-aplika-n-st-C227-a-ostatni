@@ -1,18 +1,25 @@
-# Plán nasazení – AISSE (C227)
+# Plán nasazení – AISSE (C227, migrace na verzi 9)
 
-Tento repozitář obsahuje plán nasazení frontend a aplikační části systému **C227** (verze v8, příprava na v9).
+Tento repozitář obsahuje plán migrace systému **C227** z verze v8 na verzi v9, včetně předmigračních příprav a detailního cutover plánu.
 
 ## Obsah repozitáře
 
-- `plan.md` – plán nasazení s úkoly seřazenými podle logické posloupnosti (záloha → instalace → konfigurace → nahrání aplikace → rekonfigurace LB), včetně odpovědného týmu, stavu a termínů.
+- `plan.md` – kompletní plán migrace, rozdělený do následujících fází:
+  1. **Předmigrační přípravné práce na frontend prostředí** – instalace a konfigurace Apache 2.4, nahrání Java aplikační části, rekonfigurace F5 LB, zálohy.
+  2. **Předmigrační přípravné práce na backend prostředí** – instalace Glassfish 5, vytvoření a konfigurace nových domén, nahrání WAR souborů, zálohy.
+  3. **Předmigrační přípravné práce na databázovém prostředí** – zálohy Informix instancí, nahrání migračních scriptů, přepnutí dotazování PČR.
+  4. **Cutover plán (migrace na verzi 9)** – detailní harmonogram dne ostrého přechodu (4.7.2026), rozdělený na frontend, backend a databázovou část, včetně bodů GO/NO GO a finálních kontrol funkčnosti.
 
-## Tým
+## Týmy
 
-- **Tým A** – instalace, konfigurace a nasazení frontend a aplikační části
+- **Tým A** – instalace, konfigurace a nasazení frontend a backend části
+- **Tým B** – databázové úpravy, aplikace pracovníků MV ČR
+- **Tým C** – součinnost při cutover (kontroly, vyhodnocení)
+- **ARICOMA / d-PROG** – externí dodavatelé zajišťující součinnost u vybraných kroků
 
 ## Poznámka k prostředí
 
-Nasazení probíhá za běhu produkční aplikace C227 v8. Verze v9 zatím není finální, proto mohou nastávat posuny termínů v důsledku řešení nedostatků.
+Předmigrační práce probíhají za běhu produkční aplikace C227 v8. Verze v9 zatím není finální, proto dochází k posunům termínů v souvislosti s řešením nedostatků.
 
 ---
 
@@ -51,7 +58,7 @@ Pokud push selže s chybou `non-fast-forward` (vzdálená větev obsahuje commit
 
 ### Práce s Issues
 
-Issues slouží k evidenci úkolů, chyb a návrhů souvisejících s nasazením.
+Issues slouží k evidenci úkolů, chyb a návrhů souvisejících s migrací.
 
 **Vytvoření nového issue (web):**
 1. Záložka **Issues** → **New issue**
