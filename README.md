@@ -1,14 +1,14 @@
 # Plán nasazení – AISSE (C227, migrace na verzi 9)
 
-Tento repozitář obsahuje plán migrace systému **C227** z verze v8 na verzi v9, včetně předmigračních příprav a detailního cutover plánu.
+Tento repozitář obsahuje plán migrace systému **C227** z verze v8 na verzi v9, včetně předmigračních příprav a detailního cutover plánu s časovými značkami.
 
 ## Obsah repozitáře
 
 - `plan.md` – kompletní plán migrace, rozdělený do následujících fází:
-  1. **Předmigrační přípravné práce na frontend prostředí** – instalace a konfigurace Apache 2.4, nahrání Java aplikační části, rekonfigurace F5 LB, zálohy.
-  2. **Předmigrační přípravné práce na backend prostředí** – instalace Glassfish 5, vytvoření a konfigurace nových domén, nahrání WAR souborů, zálohy.
-  3. **Předmigrační přípravné práce na databázovém prostředí** – zálohy Informix instancí, nahrání migračních scriptů, přepnutí dotazování PČR.
-  4. **Cutover plán (migrace na verzi 9)** – detailní harmonogram dne ostrého přechodu (4.7.2026), rozdělený na frontend, backend a databázovou část, včetně bodů GO/NO GO a finálních kontrol funkčnosti.
+  1. **Předmigrační přípravné práce na frontend prostředí** – instalace a konfigurace Apache 2.4, nahrání Java aplikační části, rekonfigurace F5 LB, zálohy (pracnost: 3 dny 2 hodiny).
+  2. **Předmigrační přípravné práce na backend prostředí** – instalace Glassfish 5, vytvoření a konfigurace nových domén, nahrání WAR souborů, zálohy (pracnost: 7 dnů a 3 hodiny).
+  3. **Předmigrační přípravné práce na databázovém prostředí** – zálohy Informix instancí, nahrání migračních scriptů, přepnutí dotazování PČR (pracnost: 7 hodin).
+  4. **Cutover plán (migrace na verzi 9, 4.7.2026, T = 9:00)** – detailní harmonogram dne ostrého přechodu s časovými značkami (9:00–22:10), rozdělený na frontend, backend a databázovou část, včetně bodů GO/NO GO a finálních kontrol funkčnosti (pracnost: 18:50 hod).
 
 ## Týmy
 
