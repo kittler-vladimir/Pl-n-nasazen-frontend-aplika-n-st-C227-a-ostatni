@@ -95,3 +95,44 @@
 | Vyhodnocení migrace prostředí C227 na verzi 9 GO/NO GO | 30 minut | Tým A+B+C | ARICOMA | – | Čekání | 04.07.2026 | – | – |
 | Vyhodnoceno GO | 0 minut | Tým A+B+C | ARICOMA | – | Čekání | 04.07.2026 | – | – |
 | Zaslání SMS vedení o ukončení migrace | 10 minut | Tým A+B | – | – | – | 04.07.2026 | – | 22:10 |
+
+---
+
+## 7. Testování
+
+### 7.1 Příprava testování
+
+| Úkol | Tým | Stav | Datum |
+|---|---|---|---|
+| Uvedení mobilního telefonu pro WhatsApp skupinu | – | Čekání | 03.07.2026 |
+
+### 7.2 AISEO
+
+| Úkol | Tým | Stav | Datum | Čas konce |
+|---|---|---|---|---|
+| TS EO01 Statistika stavu revizí – Praha 4, Brno za 6. měsíc | Tým C | Čekání | – | – |
+| TS EO02 Statistiky od-do – Plzeň, Brno za 6. měsíc | Tým C | Čekání | – | – |
+| Kontrola zápisu v archiv_os, osoba_vl, eo_svazek, op_inter_send | – | – | 07.07.2026 | 6:45 |
+
+### 7.3 AIS EOP
+
+| Úkol | Tým | Stav |
+|---|---|---|
+| TS OP01 Statistika vydaných OP za období podle důvodu – za 6. měsíc pro vybrané ORP | Tým C | Čekání |
+| Kontrola zápisu v archiv_op, archiv_op2 | – | – |
+
+### 7.4 AIS ECD
+
+| Úkol | Tým | Stav |
+|---|---|---|
+| TS CD01.2 Statistika CD podle datumu zavedení do evidence – za 6. měsíc pro vybrané ORP | Tým C | Čekání |
+| Kontrola zápisu v archiv_cd1, archiv_cd2 | – | – |
+| TS CD03 Skartační protokol za období – za 6. měsíc pro vybrané ORP | Tým C | Čekání |
+
+### 7.5 C227 a provozní monitoring
+
+| Úkol | Tým | Stav |
+|---|---|---|
+| C227 – rozšířené vyhledávání, dotaz na osobu, doklady | HotLine | Čekání |
+| Kontrola aplikačních LOGs – C227, AISSEZR, AISV | Tým B | Čekání |
+| Monitoring provozní zátěže – četnost připojených uživatelů, paměť, zámky, transakční logs | Tým B | Čekání |

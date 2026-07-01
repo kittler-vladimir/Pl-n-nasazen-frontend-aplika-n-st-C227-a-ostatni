@@ -1,6 +1,6 @@
 # Plán nasazení – AISSE (C227, migrace na verzi 9)
 
-Tento repozitář obsahuje plán migrace systému **C227** z verze v8 na verzi v9, včetně předmigračních příprav a detailního cutover plánu s časovými značkami.
+Tento repozitář obsahuje plán migrace systému **C227** z verze v8 na verzi v9, včetně předmigračních příprav, detailního cutover plánu s časovými značkami a testování.
 
 ## Obsah repozitáře
 
@@ -9,12 +9,19 @@ Tento repozitář obsahuje plán migrace systému **C227** z verze v8 na verzi v
   2. **Předmigrační přípravné práce na backend prostředí** – instalace Glassfish 5, vytvoření a konfigurace nových domén, nahrání WAR souborů, zálohy (pracnost: 7 dnů a 3 hodiny).
   3. **Předmigrační přípravné práce na databázovém prostředí** – zálohy Informix instancí, nahrání migračních scriptů, přepnutí dotazování PČR (pracnost: 7 hodin).
   4. **Cutover plán (migrace na verzi 9, 4.7.2026, T = 9:00)** – detailní harmonogram dne ostrého přechodu s časovými značkami (9:00–22:10), rozdělený na frontend, backend a databázovou část, včetně bodů GO/NO GO a finálních kontrol funkčnosti (pracnost: 18:50 hod).
+  7. **Testování** – testovací scénáře a kontroly po migraci, rozdělené do podsekcí:
+     - Příprava (WhatsApp skupina)
+     - AISEO (TS EO01, TS EO02, kontrola zápisů – 07.07.2026)
+     - AIS EOP (TS OP01, kontrola archiv_op)
+     - AIS ECD (TS CD01.2, TS CD03, kontrola archiv_cd)
+     - C227 a provozní monitoring (HotLine, aplikační logy, monitoring zátěže)
 
 ## Týmy
 
 - **Tým A** – instalace, konfigurace a nasazení frontend a backend části
-- **Tým B** – databázové úpravy, aplikace pracovníků MV ČR
-- **Tým C** – součinnost při cutover (kontroly, vyhodnocení)
+- **Tým B** – databázové úpravy, aplikace pracovníků MV ČR, provozní monitoring
+- **Tým C** – testování a vyhodnocení (AISEO, AIS EOP, AIS ECD)
+- **HotLine** – testování C227 (rozšířené vyhledávání, dotaz na osobu, doklady)
 - **ARICOMA / d-PROG** – externí dodavatelé zajišťující součinnost u vybraných kroků
 
 ## Poznámka k prostředí
